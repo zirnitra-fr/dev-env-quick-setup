@@ -9,7 +9,7 @@ The primary goal of deqs is to enable developers to quickly and consistently set
 - **Automate Environment Setup**: Eliminate manual configuration steps by reading configuration files and executing setup commands automatically
 - **Ensure Consistency**: Provide reproducible environments across team members and machines
 - **Support Multiple Platforms**: Work seamlessly on Linux, macOS, and Windows
-- **Be Configuration-Driven**: Allow users to define their environment setup in simple configuration files (TOML, YAML, or other formats)
+- **Be Configuration-Driven**: Allow users to define their environment setup in simple configuration files (TOML, YAML)
 - **Stay Flexible**: Adapt to various project needs and technology stacks without forcing a specific workflow
 
 ## 🔍 What is deqs?
