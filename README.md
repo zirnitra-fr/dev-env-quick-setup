@@ -74,11 +74,49 @@ nano config.json
 
 ## 📚 Documentation
 
-Detailed documentation is currently in development. Check back soon for:
+### Installation Guide
 
-- Installation Guide
-- Configuration Reference
-- Troubleshooting Guide
+**System Requirements:**
+- Linux, macOS, or Windows (with WSL)
+- Git 2.0+
+- Bash shell
+- Sudo/admin privileges
+
+**Installation Steps:**
+1. Clone: `git clone https://github.com/zirnitra-fr/dev-env-quick-setup.git`
+2. Navigate: `cd dev-env-quick-setup`
+3. Make executable: `chmod +x setup.sh`
+4. Run: `./setup.sh`
+
+### Configuration Reference
+
+The configuration file supports the following structure:
+
+```json
+{
+  "tools": ["git", "curl", "wget"],
+  "versions": {
+    "node": "20.x",
+    "python": "3.11"
+  },
+  "paths": {
+    "install_dir": "/usr/local"
+  },
+  "environment": {
+    "EDITOR": "vim"
+  }
+}
+```
+
+### Troubleshooting
+
+**Common Issues:**
+
+- **Permission Denied**: Run with sudo: `sudo ./setup.sh`
+- **Command Not Found**: Ensure script is executable: `chmod +x setup.sh`
+- **Network Issues**: Check internet connection and proxy settings
+
+For more help, open an issue on GitHub.
 
 ## 🤝 Contributing
 
