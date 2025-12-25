@@ -1,120 +1,136 @@
-# Dev Environment Quick Setup
+# Dev Environment Quick Setup (deqs)
 
-A streamlined tool for quickly setting up development environments across different platforms and technologies.
+A streamlined binary tool for quickly setting up development environments across different platforms and technologies.
 
 ## 🎯 Overview
 
-Dev Environment Quick Setup is an open-source project designed to simplify and automate the process of setting up development environments. Whether you're onboarding new team members, switching between projects, or setting up a fresh machine, this tool helps you get up and running quickly.
+**deqs** (Development Environment Quick Setup) is an open-source binary tool that reads configuration files and executes commands to automate the setup of development environments. Whether you're onboarding new team members, switching between projects, or setting up a fresh machine, deqs helps you get up and running quickly by executing predefined setup commands from your configuration.
 
 ## ✨ Features
 
-- **Automated Setup**: Quick installation of common development tools and dependencies
-- **Cross-Platform Support**: Works on Linux, macOS, and Windows
-- **Customizable Configurations**: Easily adapt setup scripts to your project's needs
+- **Configuration-Driven**: Define your environment setup in TOML, YAML, or other configuration formats
+- **Command Execution**: Execute setup commands automatically from configuration files
+- **Cross-Platform Support**: Binary available for Linux, macOS, and Windows
+- **Flexible Configuration**: Easily adapt configuration files to your project's needs
 - **Version Management**: Support for multiple versions of languages and tools
-- **Reproducible Environments**: Ensure consistency across team members
-- **Modular Design**: Pick and choose only the tools you need
+- **Reproducible Environments**: Ensure consistency across team members with shared configuration files
+- **Modular Design**: Pick and choose only the tools you need in your configuration
 
 ## 📋 Prerequisites
 
-Before using this tool, ensure you have:
+Before using deqs, ensure you have:
 
-- Git installed on your system
-- Bash shell (or WSL on Windows)
-- Administrative/sudo privileges for installing system packages
-- Internet connection for downloading dependencies
+- The deqs binary installed on your system
+- Administrative/sudo privileges for installing system packages (depending on your configuration)
+- Internet connection for downloading dependencies (depending on your configuration)
 
 ## 🚀 Quick Start
 
 ### Installation
 
+Download the deqs binary for your platform from the [releases page](https://github.com/zirnitra-fr/dev-env-quick-setup/releases) and add it to your PATH.
+
 ```bash
-# Clone the repository
-git clone https://github.com/zirnitra-fr/dev-env-quick-setup.git
-cd dev-env-quick-setup
-
-# Make the setup script executable
-chmod +x setup.sh
-
-# Run the setup
-./setup.sh
+# Example for Linux/macOS
+curl -L https://github.com/zirnitra-fr/dev-env-quick-setup/releases/latest/download/deqs-<platform> -o deqs
+chmod +x deqs
+sudo mv deqs /usr/local/bin/
 ```
 
 ### Basic Usage
 
 ```bash
-# Setup a basic development environment
-./setup.sh --basic
+# Run deqs with a configuration file
+deqs config.toml
 
-# Setup for specific technologies
-./setup.sh --node --python --docker
+# Or with a YAML configuration
+deqs config.yaml
 
 # View all available options
-./setup.sh --help
+deqs --help
 ```
 
 ## 🔧 Configuration
 
-You can customize the setup by editing the configuration file:
+Create a configuration file (TOML, YAML, or other supported format) to define your environment setup:
 
-```bash
-# Copy the example configuration
-cp config.example.json config.json
+### TOML Example
 
-# Edit the configuration file
-nano config.json
+```toml
+# config.toml
+[[commands]]
+name = "Install Node.js"
+command = "curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -"
+
+[[commands]]
+name = "Install npm packages"
+command = "npm install -g yarn pnpm"
+
+[[commands]]
+name = "Setup Git"
+command = "git config --global user.name 'Your Name'"
+```
+
+### YAML Example
+
+```yaml
+# config.yaml
+commands:
+  - name: Install Python
+    command: sudo apt-get install -y python3.11
+  - name: Install pip packages
+    command: pip install --user poetry black pytest
 ```
 
 ### Configuration Options
 
-- `tools`: List of tools to install
-- `versions`: Specific versions for each tool
-- `paths`: Custom installation paths
-- `environment`: Environment variables to set
+Configuration files define a series of commands that deqs will execute to set up your environment. Each command can include:
+- `name`: Descriptive name for the setup step
+- `command`: The command to execute
+- Additional options (to be documented as features are implemented)
 
 ## 📚 Documentation
 
 ### Installation Guide
 
 **System Requirements:**
-- Linux, macOS, or Windows (with WSL)
-- Git 2.0+
-- Bash shell
-- Sudo/admin privileges
+- Linux, macOS, or Windows
+- Administrative privileges (depending on your configuration)
 
 **Installation Steps:**
-1. Clone: `git clone https://github.com/zirnitra-fr/dev-env-quick-setup.git`
-2. Navigate: `cd dev-env-quick-setup`
-3. Make executable: `chmod +x setup.sh`
-4. Run: `./setup.sh`
+1. Download the deqs binary for your platform from the [releases page](https://github.com/zirnitra-fr/dev-env-quick-setup/releases)
+2. Make it executable: `chmod +x deqs` (Linux/macOS)
+3. Move to PATH: `sudo mv deqs /usr/local/bin/` (or add to your PATH)
+4. Verify installation: `deqs --version`
 
 ### Configuration Reference
 
-The configuration file supports the following structure:
+Create a configuration file defining the commands to execute for environment setup. Supported formats include TOML and YAML.
 
-```json
-{
-  "tools": ["git", "curl", "wget"],
-  "versions": {
-    "node": "20.x",
-    "python": "3.11"
-  },
-  "paths": {
-    "install_dir": "/usr/local"
-  },
-  "environment": {
-    "EDITOR": "vim"
-  }
-}
+**Basic Structure:**
+- Define a series of commands with descriptive names
+- Each command is executed in sequence
+- Commands can install tools, configure settings, or perform any shell operation
+
+**Example Configuration:**
+```toml
+[[commands]]
+name = "Update package manager"
+command = "sudo apt-get update"
+
+[[commands]]
+name = "Install development tools"
+command = "sudo apt-get install -y build-essential git curl"
 ```
 
 ### Troubleshooting
 
 **Common Issues:**
 
-- **Permission Denied**: Run with sudo: `sudo ./setup.sh`
-- **Command Not Found**: Ensure script is executable: `chmod +x setup.sh`
-- **Network Issues**: Check internet connection and proxy settings
+- **Permission Denied**: Some commands may require sudo privileges
+- **Command Not Found**: Ensure deqs is in your PATH
+- **Configuration Parse Error**: Verify your configuration file syntax
+- **Command Execution Failed**: Check individual command syntax and availability
 
 For more help, open an issue on GitHub.
 
