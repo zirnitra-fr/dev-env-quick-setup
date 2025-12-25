@@ -31,10 +31,18 @@ Before using deqs, ensure you have:
 Download the deqs binary for your platform from the [releases page](https://github.com/zirnitra-fr/dev-env-quick-setup/releases) and add it to your PATH.
 
 ```bash
-# Example for Linux/macOS
-curl -L https://github.com/zirnitra-fr/dev-env-quick-setup/releases/latest/download/deqs-<platform> -o deqs
+# Example for Linux (amd64)
+curl -L https://github.com/zirnitra-fr/dev-env-quick-setup/releases/latest/download/deqs-linux-amd64 -o deqs
 chmod +x deqs
 sudo mv deqs /usr/local/bin/
+
+# Example for macOS (amd64)
+curl -L https://github.com/zirnitra-fr/dev-env-quick-setup/releases/latest/download/deqs-darwin-amd64 -o deqs
+chmod +x deqs
+sudo mv deqs /usr/local/bin/
+
+# Example for Windows (amd64)
+# Download deqs-windows-amd64.exe from the releases page and add to PATH
 ```
 
 ### Basic Usage
@@ -45,6 +53,9 @@ deqs config.toml
 
 # Or with a YAML configuration
 deqs config.yaml
+
+# Check version
+deqs --version
 
 # View all available options
 deqs --help
@@ -98,7 +109,7 @@ Configuration files define a series of commands that deqs will execute to set up
 - Administrative privileges (depending on your configuration)
 
 **Installation Steps:**
-1. Download the deqs binary for your platform from the [releases page](https://github.com/zirnitra-fr/dev-env-quick-setup/releases)
+1. Download the deqs binary for your platform from the releases page
 2. Make it executable: `chmod +x deqs` (Linux/macOS)
 3. Move to PATH: `sudo mv deqs /usr/local/bin/` (or add to your PATH)
 4. Verify installation: `deqs --version`
