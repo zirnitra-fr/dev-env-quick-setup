@@ -8,39 +8,39 @@ To create the most user-friendly, comprehensive, and reliable tool for setting u
 
 ## 📍 Current Status
 
-### Version 0.1.0 (Foundation) - In Progress
+### Foundation Phase - In Progress
 
 The project is currently in its initial phase, focusing on establishing core functionality and project structure.
 
 **Current Priorities:**
-- Establishing project documentation (README, Roadmap, Contributing guidelines)
+- Establishing project documentation (README, Roadmap)
 - Setting up repository structure and governance
 - Defining core features and use cases
-- Building community foundations
 
-## 🗓️ Release Milestones
+## 🗓️ Milestones
 
-### Phase 1: Foundation (Q1 2026)
+### Milestone 1: Foundation
 
 **Goal**: Establish core functionality and basic setup capabilities
 
-- [ ] **Core Setup Scripts**
-  - Basic installation script framework
+- [ ] **Core Binary Tool**
+  - Basic binary implementation
+  - Configuration file parsing (TOML/YAML)
+  - Command execution engine
   - Support for Linux (Ubuntu/Debian)
   - Common development tools installation (Git, cURL, wget)
   
 - [ ] **Configuration System**
-  - JSON/YAML-based configuration
+  - Configuration file format specification
   - Template configurations for common setups
-  - User preference management
+  - Error handling and validation
 
 - [ ] **Documentation**
-  - Complete installation guide
+  - Installation guide
   - Configuration reference
-  - Troubleshooting guide
-  - Contributing guidelines
+  - Usage examples
 
-### Phase 2: Multi-Platform Support (Q2 2026)
+### Milestone 2: Multi-Platform Support
 
 **Goal**: Expand platform and OS support
 
@@ -60,7 +60,7 @@ The project is currently in its initial phase, focusing on establishing core fun
   - Import and restore configurations
   - Migration tools
 
-### Phase 3: Language & Framework Support (Q3 2026)
+### Milestone 3: Language & Framework Support
 
 **Goal**: Add comprehensive support for popular programming languages and frameworks
 
@@ -85,7 +85,7 @@ The project is currently in its initial phase, focusing on establishing core fun
   - JetBrains IDEs configuration
   - Terminal emulator setup
 
-### Phase 4: Advanced Features (Q4 2026)
+### Milestone 4: Advanced Features
 
 **Goal**: Implement advanced automation and customization features
 
@@ -95,9 +95,9 @@ The project is currently in its initial phase, focusing on establishing core fun
   - Team/organization shared profiles
 
 - [ ] **Interactive Setup**
-  - GUI-based setup wizard
   - Interactive CLI prompts
   - Dry-run mode to preview changes
+  - Progress reporting and logging
 
 - [ ] **Dotfiles Management**
   - Integration with existing dotfiles repositories
@@ -109,7 +109,7 @@ The project is currently in its initial phase, focusing on establishing core fun
   - Community plugin repository
   - Custom script hooks
 
-### Phase 5: Ecosystem & Community (2027)
+### Milestone 5: Ecosystem & Community
 
 **Goal**: Build a thriving community and ecosystem
 
@@ -134,28 +134,6 @@ The project is currently in its initial phase, focusing on establishing core fun
   - Performance benchmarks
   - Security audits
 
-## 🌟 Community Contribution Areas
-
-We welcome community contributions in the following areas:
-
-### High Priority
-- **Platform Support**: Help us support more operating systems and distributions
-- **Tool Integrations**: Add support for additional development tools and frameworks
-- **Documentation**: Improve guides, add translations, create tutorials
-- **Testing**: Test on different platforms and configurations, report bugs
-
-### Medium Priority
-- **Templates**: Create and share configuration templates for specific use cases
-- **Examples**: Provide real-world examples and use case demonstrations
-- **Tutorials**: Write blog posts, create videos, or host workshops
-- **UI/UX**: Design improvements for CLI and future GUI components
-
-### Future Features
-- **AI-Assisted Setup**: Intelligent recommendations based on project analysis
-- **Cloud Integration**: Seamless cloud development environment provisioning
-- **Team Collaboration**: Shared team environments and settings synchronization
-- **Analytics**: Optional usage analytics to improve the tool (privacy-first)
-
 ## 📊 Success Metrics
 
 We'll measure the project's success by:
@@ -167,33 +145,13 @@ We'll measure the project's success by:
 - **Documentation**: User satisfaction with documentation completeness
 - **Performance**: Average setup time and resource usage
 
-## 🔄 Review Process
-
-This roadmap is reviewed and updated:
-
-- **Monthly**: Progress updates and priority adjustments
-- **Quarterly**: Major milestone reviews and planning
-- **Annually**: Strategic direction and long-term goals
-
-## 💡 How to Influence the Roadmap
-
-The community plays a crucial role in shaping our roadmap:
-
-1. **Vote on Features**: React to issues with 👍 to show interest
-2. **Propose Ideas**: Open feature request issues with detailed descriptions
-3. **Contribute**: Submit PRs for features you'd like to see
-4. **Discuss**: Participate in discussions and RFC (Request for Comments) issues
-5. **Share Use Cases**: Tell us how you're using the tool and what's missing
-
 ## 📝 Notes
 
 - This roadmap focuses on the **open-source** aspects of the project
-- Timelines are approximate and may shift based on community contributions and priorities
+- Milestones may shift based on community contributions and priorities
 - Features may be added, modified, or reprioritized based on user feedback
 - We practice agile development - expect iterations and refinements
 
 ---
-
-**Last Updated**: December 2025
 
 For questions about the roadmap or to suggest changes, please open a discussion in our [GitHub Discussions](https://github.com/zirnitra-fr/dev-env-quick-setup/discussions) or reach out to the maintainers.
