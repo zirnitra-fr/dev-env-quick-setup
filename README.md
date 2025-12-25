@@ -74,11 +74,11 @@ nano config.json
 
 ## 📚 Documentation
 
-For detailed documentation, please refer to:
+Detailed documentation is currently in development. Check back soon for:
 
-- [Installation Guide](docs/installation.md) (coming soon)
-- [Configuration Reference](docs/configuration.md) (coming soon)
-- [Troubleshooting](docs/troubleshooting.md) (coming soon)
+- Installation Guide
+- Configuration Reference
+- Troubleshooting Guide
 
 ## 🤝 Contributing
 
@@ -128,7 +128,7 @@ When reporting issues, please include:
 
 ## 📄 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🌟 Acknowledgments
 
