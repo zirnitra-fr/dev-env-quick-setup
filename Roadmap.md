@@ -8,16 +8,60 @@ To create the most user-friendly, comprehensive, and reliable tool for setting u
 
 ## 📍 Current Status
 
-### Foundation Phase - In Progress
+### Specification Phase - In Progress
 
-The project is currently in its initial phase, focusing on establishing core functionality and project structure.
+The project is currently in its initial specification and architecture phase, focusing on defining the foundational design decisions before implementation begins.
 
 **Current Priorities:**
 - Establishing project documentation (README, Roadmap)
+- Defining configuration file structure and format
+- Discussing architectural decisions for command integration
+- Specifying dependency management strategy
 - Setting up repository structure and governance
-- Defining core features and use cases
 
 ## 🗓️ Milestones
+
+### Milestone 0: Architecture & Specification
+
+**Goal**: Define the foundational architecture and specifications before implementation
+
+This critical phase must be completed first to establish the technical foundation and design decisions that will guide all subsequent development.
+
+- [ ] **Configuration File Specification**
+  - Define configuration file structure and schema
+  - Specify supported formats (TOML/YAML) with detailed syntax
+  - Document configuration file versioning strategy
+  - Define how commands are declared and parameterized
+  - Establish validation rules and error handling approach
+
+- [ ] **Command Integration Architecture**
+  - Decide command execution model: built-in, plugin-based, or hybrid
+  - Define how commands are interpreted (e.g., "git" command handling)
+  - Specify command discovery and resolution mechanism
+  - Design command lifecycle and execution flow
+  - Document command output handling and logging
+
+- [ ] **Dependency Management Strategy**
+  - Define automatic dependency detection mechanism
+  - Specify how missing dependencies are identified
+  - Design automatic installation workflow (e.g., if git is missing → install and configure git)
+  - Establish dependency resolution order and conflict handling
+  - Define platform-specific installation strategies
+
+- [ ] **Architectural Decision Records (ADRs)**
+  - Document key architectural decisions and rationale
+  - Evaluate trade-offs between different approaches
+  - Define extension points for future flexibility
+  - Establish plugin architecture (if applicable)
+  - Create decision framework for future design choices
+
+- [ ] **Error Prevention & Recovery**
+  - Design error detection before command execution
+  - Specify pre-flight checks for dependencies
+  - Define rollback and recovery mechanisms
+  - Establish user feedback and error messaging strategy
+
+**Note**: This specification phase requires discussion and consensus on architectural decisions before proceeding to implementation milestones.
 
 ### Milestone 1: Foundation
 
